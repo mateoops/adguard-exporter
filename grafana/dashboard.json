@@ -18,7 +18,7 @@
     },
     {
       "type": "panel",
-      "id": "grafana-piechart-panel",
+      "id": "piechart",
       "name": "Pie Chart",
       "version": "1.5.0"
     },
@@ -586,7 +586,7 @@
       "strokeWidth": 1,
       "targets": [
         {
-          "expr": "adguard_top_queried_domains{hostname=~'$node'}",
+          "expr": "topk(50, adguard_top_queried_domains{hostname=~'$node'})",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -599,7 +599,7 @@
       "timeShift": null,
       "title": "Top queries by domain",
       "transparent": true,
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "avg"
     },
     {
@@ -641,7 +641,7 @@
       "strokeWidth": 1,
       "targets": [
         {
-          "expr": "adguard_top_blocked_domains{hostname=~'$node'}",
+          "expr": "topk(50, adguard_top_blocked_domains{hostname=~'$node'})",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -654,7 +654,7 @@
       "timeShift": null,
       "title": "Top ads by domain",
       "transparent": true,
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "avg"
     },
     {
@@ -908,7 +908,7 @@
       "timeShift": null,
       "title": "Replies by type",
       "transparent": true,
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "avg"
     },
     {
@@ -963,7 +963,7 @@
       "timeShift": null,
       "title": "Top clients by source",
       "transparent": true,
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "avg"
     },
     {
